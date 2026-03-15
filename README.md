@@ -1,2 +1,0 @@
-# GrupoVip
-Clube18
