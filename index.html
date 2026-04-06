@@ -105,6 +105,34 @@
       </div>
     </div>
 
+    <div style="background:#0d1b2a;color:#fff;padding:20px;border-radius:12px;text-align:center;font-family:Arial;">
+  <h2 style="color:#ffd700;">💳 PAGAMENTO VIA PIX</h2>
+  
+  <p><strong>Chave Pix (CNPJ):</strong></p>
+  <p id="pixKey" style="font-size:20px;color:#00e0ff;">
+    52.575.565/0001-09
+  </p>
+
+  <button onclick="copiarPix()" 
+    style="background:#ffd700;color:#000;border:none;padding:10px 20px;
+    border-radius:8px;cursor:pointer;font-weight:bold;">
+    📋 Copiar Chave Pix
+  </button>
+
+  <p style="margin-top:15px;">
+    👤 Gabriel Musuris<br>
+    🔐 Administrador de Grupo VIP
+  </p>
+</div>
+
+<script>
+function copiarPix() {
+  const chave = document.getElementById("pixKey").innerText;
+  navigator.clipboard.writeText(chave);
+  alert("Chave Pix copiada com sucesso!");
+}
+</script>
+
     <div class="box">
       <h2>🚀 Como funciona?</h2>
       <p>✔️ Pagou, entrou!</p>
