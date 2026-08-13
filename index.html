@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Club Love — grupo VIP no WhatsApp para adultos.">
+  <title>Club Love | Grupo VIP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">♡ <span>CLUB</span> <b>LOVE</b></div>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#grupo">O Grupo</a>
+      <a href="#regras">Regras</a>
+      <a href="#cadastro">Cadastro</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">♥ O GRUPO MAIS QUENTE DO WHATSAPP ♥</p>
+        <h1>CLUB <span>LOVE</span></h1>
+        <p class="subtitle">Um espaço exclusivo para adultos, com confirmação de verificação e respeito entre os participantes.</p>
+        <a class="cta" href="#cadastro">ENTRAR AGORA</a>
+      </div>
+      <div class="hero-image" aria-label="Capa Club Love"></div>
+    </section>
+
+    <section id="grupo" class="cards">
+      <article class="card">
+        <span class="icon">♥</span>
+        <h2>Casais e mulheres</h2>
+        <strong>GRATUITO</strong>
+        <p>Entrada mediante confirmação de verificação.</p>
+      </article>
+      <article class="card featured">
+        <span class="icon">★</span>
+        <h2>Solteiros</h2>
+        <strong>R$ 15,00</strong>
+        <p>Acesso mediante pagamento via Pix e confirmação.</p>
+      </article>
+      <article class="card">
+        <span class="icon">✓</span>
+        <h2>Verificação</h2>
+        <strong>PRIVACIDADE</strong>
+        <p>Cadastro com confirmação antes do acesso ao grupo.</p>
+      </article>
+    </section>
+
+    <section id="regras" class="rules">
+      <h2>Regras do Club Love</h2>
+      <div class="rule-grid">
+        <div>🔞 <b>Somente maiores de 18 anos</b><br><small>Ao entrar, você declara ter idade legal para participar.</small></div>
+        <div>🛡️ <b>Respeito sempre</b><br><small>Sem assédio, ameaças ou divulgação de dados pessoais.</small></div>
+        <div>🔒 <b>Privacidade</b><br><small>Não compartilhe conteúdo ou informações de outros participantes sem autorização.</small></div>
+      </div>
+    </section>
+
+    <section id="cadastro" class="signup">
+      <div class="signup-intro">
+        <p class="eyebrow">ACESSO VIP</p>
+        <h2>Faça seu cadastro</h2>
+        <p>Preencha seus dados. Depois da confirmação, o botão levará você diretamente ao WhatsApp.</p>
+      </div>
+
+      <form id="signupForm" class="form">
+        <label>Nome<input id="nome" name="nome" type="text" autocomplete="given-name" required></label>
+        <label>Sobrenome<input id="sobrenome" name="sobrenome" type="text" autocomplete="family-name" required></label>
+        <label class="full">E-mail<input id="email" name="email" type="email" autocomplete="email" required></label>
+        <label class="full">Número de telefone<input id="telefone" name="telefone" type="tel" autocomplete="tel" placeholder="(00) 00000-0000" required></label>
+        <label class="terms full">
+          <input id="termos" type="checkbox" required>
+          <span>Declaro que tenho <b>18 anos ou mais</b> e concordo com os <button type="button" id="openTerms">Termos de Uso</button>.</span>
+        </label>
+        <button class="submit full" type="submit">CONTINUAR PARA O WHATSAPP →</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>© 2026 Club Love · Grupo exclusivo para maiores de 18 anos.</footer>
+
+  <dialog id="termsDialog">
+    <button class="close" id="closeTerms" aria-label="Fechar">×</button>
+    <h2>Termos de Uso</h2>
+    <p>O Club Love é destinado exclusivamente a pessoas maiores de 18 anos. O participante deve respeitar os demais membros, não compartilhar dados pessoais de terceiros sem autorização e seguir as regras do grupo.</p>
+    <p>Ao solicitar acesso, você confirma que as informações fornecidas são verdadeiras e aceita as regras de participação.</p>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
