@@ -3,182 +3,1189 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#ff0b83">
-<title>ClubLove VIP • Telegram</title>
+
+<title>ClubLove VIP 💎</title>
+
 <style>
+
+/* =========================
+   CONFIGURAÇÕES
+========================= */
+
 :root {
-  --pink:#ff0b83; --pink2:#ff4da6; --purple:#7b12d8; --dark:#08030d;
-  --card:rgba(19,7,27,.82); --line:rgba(255,255,255,.12); --text:#fff7fd; --muted:#d9c8d8;
+    --preto: #050207;
+    --roxo: #18051f;
+    --rosa: #ff0b83;
+    --rosa-claro: #ff69b4;
+    --dourado: #ffd700;
+    --dourado-claro: #fff1a8;
+    --dourado-escuro: #b8860b;
+    --branco: #fff;
+    --cinza: #d8cbd8;
 }
-*{box-sizing:border-box}
-body{margin:0;background:radial-gradient(circle at 50% 0%,#4b087d 0,#17051e 35%,#050207 85%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
-a{color:inherit}
-.container{width:min(1080px,92%);margin:auto}
-.hero{position:relative;min-height:620px;display:flex;align-items:flex-end;overflow:hidden;border-bottom:1px solid var(--line)}
-.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(to bottom,rgba(3,0,7,.05),rgba(3,0,7,.82) 88%),url("data:image/jpeg;base64,CAPA_CLUBLOVE.jpg");background-size:cover;background-position:center top;filter:saturate(1.08)}
-.hero-content{position:relative;z-index:2;width:100%;padding:70px 0 42px;text-align:center}
-.badge{display:inline-block;padding:7px 14px;border:1px solid rgba(255,255,255,.2);border-radius:999px;background:rgba(0,0,0,.35);backdrop-filter:blur(8px);font-weight:700;color:#ffd9ef}
-h1{font-size:clamp(2.4rem,7vw,5.2rem);margin:12px 0 4px;letter-spacing:-.05em;text-shadow:0 0 25px rgba(255,0,136,.55)}
-.hero p{max-width:720px;margin:0 auto 22px;color:#fff; font-size:clamp(1rem,2.3vw,1.25rem)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:14px;padding:13px 20px;font-weight:800;text-decoration:none;cursor:pointer;transition:.2s;box-shadow:0 8px 25px rgba(0,0,0,.25)}
-.btn:hover{transform:translateY(-2px)}
-.btn-primary{background:linear-gradient(135deg,#ff0b83,#ff56b1);color:#fff}
-.btn-telegram{background:linear-gradient(135deg,#5b2be0,#9d38ff);color:#fff}
-.btn-dark{background:#170c1e;color:#fff;border:1px solid var(--line)}
-section{padding:55px 0}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:25px;box-shadow:0 15px 45px rgba(0,0,0,.28);backdrop-filter:blur(10px)}
-.card h3{margin:0 0 8px;font-size:1.15rem}
-.card p{margin:0;color:var(--muted)}
-.icon{font-size:1.8rem;margin-bottom:8px}
-h2{font-size:clamp(1.8rem,4vw,2.6rem);margin:0 0 12px;text-align:center}
-.lead{text-align:center;color:var(--muted);max-width:720px;margin:0 auto 28px}
-.price{font-size:2rem;font-weight:900;color:#ff70bb}
-.pix{display:flex;gap:10px;align-items:center;flex-wrap:wrap;background:#0d0612;border:1px dashed rgba(255,90,170,.45);padding:15px;border-radius:16px}
-.pix code{font-size:1rem;word-break:break-all;color:#ffd3eb;flex:1}
-.notice{font-size:.9rem;color:var(--muted)}
-.form-wrap{max-width:760px;margin:auto}
-form{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-.field{display:flex;flex-direction:column;gap:7px}
-.full{grid-column:1/-1}
-label{font-weight:700;font-size:.94rem}
-input,select{width:100%;padding:13px 14px;border-radius:12px;border:1px solid var(--line);background:#100816;color:#fff;outline:none}
-input:focus,select:focus{border-color:#ff3d9e;box-shadow:0 0 0 3px rgba(255,61,158,.12)}
-.checkbox{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:.9rem}
-.checkbox input{width:auto;margin-top:5px}
-.terms{max-height:230px;overflow:auto;background:#0d0612;border:1px solid var(--line);border-radius:14px;padding:16px;color:var(--muted);font-size:.9rem}
-.success{display:none;margin-top:15px;padding:14px;border-radius:12px;background:rgba(38,190,120,.12);border:1px solid rgba(38,190,120,.35);color:#d9ffec}
-footer{padding:30px 0 50px;text-align:center;color:#aa94aa;border-top:1px solid var(--line)}
-@media(max-width:760px){.grid{grid-template-columns:1fr}form{grid-template-columns:1fr}.hero{min-height:560px}}
+
+/* =========================
+   GERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at top, #4b0870 0%, #16051d 35%, #050207 80%);
+    color: var(--branco);
+}
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section {
+    padding: 65px 0;
+}
+
+/* =========================
+   BANNER / CAPA
+========================= */
+
+.hero {
+    position: relative;
+    min-height: 650px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    border-bottom: 2px solid var(--dourado);
+    box-shadow: 0 10px 50px rgba(255, 215, 0, .15);
+}
+
+/* FOTO DA CAPA */
+.hero-banner {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center top;
+
+    z-index: 0;
+}
+
+/* ESCURECE A FOTO PARA O TEXTO APARECER */
+.hero::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.05),
+            rgba(5,2,7,.25),
+            rgba(5,2,7,.95)
+        );
+
+    z-index: 1;
+}
+
+/* =========================
+   TEXTO DO BANNER
+========================= */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+
+    padding: 80px 20px 45px;
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border: 1px solid var(--dourado);
+    border-radius: 50px;
+
+    color: var(--dourado-claro);
+
+    background: rgba(0,0,0,.45);
+
+    box-shadow:
+        0 0 15px rgba(255,215,0,.35);
+
+    font-weight: bold;
+}
+
+h1 {
+    margin: 15px 0 5px;
+
+    font-size: clamp(45px, 9vw, 90px);
+
+    color: var(--dourado);
+
+    font-family: Georgia, serif;
+
+    text-shadow:
+        0 0 5px #fff,
+        0 0 15px var(--dourado),
+        0 0 35px rgba(255,215,0,.8);
+}
+
+.hero p {
+    max-width: 750px;
+
+    margin: 0 auto 25px;
+
+    font-size: 20px;
+
+    color: var(--dourado-claro);
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 25px;
+
+    border-radius: 15px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    border: none;
+
+    transition: .3s;
+
+    margin: 5px;
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.02);
+}
+
+/* BOTÃO DOURADO */
+
+.btn-primary {
+    color: #1a0b00;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff3a6,
+            #ffd700,
+            #b8860b
+        );
+
+    box-shadow:
+        0 0 15px rgba(255,215,0,.45);
+}
+
+/* TELEGRAM */
+
+.btn-telegram {
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7d20e8,
+            #ff0b83
+        );
+
+    box-shadow:
+        0 0 20px rgba(255,11,131,.4);
+}
+
+/* WHATSAPP */
+
+.btn-whatsapp {
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #19c765,
+            #078d42
+        );
+
+    box-shadow:
+        0 0 20px rgba(25,199,101,.3);
+}
+
+/* =========================
+   TÍTULOS
+========================= */
+
+h2 {
+    text-align: center;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(30px, 5vw, 48px);
+
+    color: var(--dourado);
+
+    margin-bottom: 12px;
+
+    text-shadow:
+        0 0 10px rgba(255,215,0,.45);
+}
+
+.lead {
+    text-align: center;
+
+    color: var(--dourado-claro);
+
+    max-width: 750px;
+
+    margin: 0 auto 35px;
+
+    font-size: 17px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.card {
+    padding: 28px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(30,8,40,.92),
+            rgba(8,3,12,.92)
+        );
+
+    border: 1px solid rgba(255,215,0,.3);
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.4),
+        inset 0 0 25px rgba(255,215,0,.03);
+
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--dourado);
+
+    box-shadow:
+        0 0 25px rgba(255,215,0,.2),
+        0 20px 50px rgba(0,0,0,.5);
+}
+
+.card h3 {
+    color: var(--dourado);
+
+    font-size: 21px;
+}
+
+.card p {
+    color: var(--cinza);
+}
+
+.icon {
+    font-size: 40px;
+}
+
+/* =========================
+   PREÇO
+========================= */
+
+.price {
+    color: var(--dourado);
+
+    font-size: 35px;
+
+    font-weight: 900;
+
+    text-shadow:
+        0 0 12px rgba(255,215,0,.5);
+}
+
+/* =========================
+   PIX
+========================= */
+
+.pix {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    padding: 18px;
+
+    background: rgba(0,0,0,.4);
+
+    border: 1px dashed var(--dourado);
+
+    border-radius: 15px;
+}
+
+.pix code {
+    flex: 1;
+
+    color: var(--dourado-claro);
+
+    font-size: 18px;
+
+    word-break: break-all;
+}
+
+.notice {
+    color: var(--dourado);
+}
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.form-wrap {
+    max-width: 800px;
+
+    margin: auto;
+}
+
+form {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 16px;
+}
+
+.field {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.full {
+    grid-column: 1 / -1;
+}
+
+label {
+    color: var(--dourado);
+
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(255,215,0,.25);
+
+    background: #100714;
+
+    color: white;
+
+    outline: none;
+
+    font-size: 16px;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--dourado);
+
+    box-shadow:
+        0 0 10px rgba(255,215,0,.2);
+}
+
+select option {
+    background: #15081b;
+
+    color: white;
+}
+
+/* =========================
+   TERMOS
+========================= */
+
+.terms {
+    max-height: 240px;
+
+    overflow-y: auto;
+
+    padding: 18px;
+
+    background: #0c0610;
+
+    border: 1px solid rgba(255,215,0,.2);
+
+    border-radius: 14px;
+
+    color: var(--cinza);
+
+    font-size: 14px;
+}
+
+.terms strong {
+    color: var(--dourado);
+}
+
+.checkbox {
+    display: flex;
+
+    gap: 10px;
+
+    align-items: flex-start;
+
+    color: var(--cinza);
+}
+
+.checkbox input {
+    width: auto;
+
+    margin-top: 5px;
+}
+
+.checkbox label {
+    color: var(--cinza);
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    padding: 40px 0;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255,215,0,.2);
+
+    color: var(--dourado);
+
+    background: #050207;
+}
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 760px) {
+
+    .hero {
+        min-height: 580px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        padding-bottom: 35px;
+    }
+
+    h1 {
+        font-size: 52px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
 </style>
 </head>
+
 <body>
+
+<!-- =========================
+     CAPA
+========================= -->
+
 <header class="hero">
-  <div class="hero-content container">
-    <span class="badge">💎✨ CLUBLOVE VIP ✨💎</span>
-    <h1>ClubLove VIP</h1>
-    <p>O grupo que você estava procurando está aqui! Conheça gente nova, faça amizades, converse e se divirta no Telegram.</p>
-    <a class="btn btn-telegram" href="https://t.me/GamoraVipBot" target="_blank" rel="noopener">📲 Entrar no Telegram</a>
-  </div>
+
+    <!-- IMPORTANTE:
+         deixe CAPA_CLUBLOVE.jpg na mesma pasta deste HTML -->
+
+    <img
+        class="hero-banner"
+        src="CAPA_CLUBLOVE.jpg"
+        alt="ClubLove VIP"
+    >
+
+    <div class="hero-content container">
+
+        <span class="badge">
+            💎✨ CLUBLOVE VIP ✨💎
+        </span>
+
+        <h1>
+            ClubLove VIP
+        </h1>
+
+        <p>
+            🔥 O grupo que você estava procurando está aqui!
+            Conheça gente nova, faça amizades, converse e se divirta.
+        </p>
+
+        <a
+            class="btn btn-telegram"
+            href="https://t.me/SEU_GRUPO_AQUI"
+            target="_blank"
+        >
+            📲 Entrar no Telegram
+        </a>
+
+    </div>
+
 </header>
 
-<main>
-<section>
-<div class="container">
-  <h2>🔥 O seu novo grupo VIP</h2>
-  <p class="lead">Um espaço movimentado para pessoas reais, novas amizades, conversa e diversão, com foco em segurança e respeito.</p>
-  <div class="grid">
-    <div class="card"><div class="icon">👩‍🦰</div><h3>Mulheres</h3><p><strong>Entrada 100% gratuita.</strong> 💖</p></div>
-    <div class="card"><div class="icon">👨</div><h3>Homens</h3><p><span class="price">R$ 20</span><br>Pagamento único com acesso vitalício.</p></div>
-    <div class="card"><div class="icon">🔐</div><h3>Mais segurança</h3><p>Grupo com verificação, respeito e interação entre participantes.</p></div>
-  </div>
-</div>
-</section>
+
+<!-- =========================
+     APRESENTAÇÃO
+========================= -->
 
 <section>
+
 <div class="container">
-  <div class="grid">
-    <div class="card"><div class="icon">👥</div><h3>Pessoas reais</h3><p>Interação de verdade e oportunidade para conhecer novas pessoas.</p></div>
-    <div class="card"><div class="icon">💬</div><h3>Conversa & amizade</h3><p>Conversas, amizades e muita diversão todos os dias.</p></div>
-    <div class="card"><div class="icon">🎉</div><h3>Ambiente animado</h3><p>Conteúdos exclusivos e grupo movimentado para os participantes.</p></div>
-  </div>
+
+<h2>
+    💎 Bem-vindo ao ClubLove VIP
+</h2>
+
+<p class="lead">
+    Um espaço para conhecer pessoas, fazer amizades,
+    conversar e se divertir todos os dias.
+</p>
+
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">👩‍🦰</div>
+
+<h3>
+    Mulheres
+</h3>
+
+<p>
+    Entrada <strong style="color:#ffd700;">
+    100% GRATUITA
+    </strong> 💖
+</p>
+
 </div>
+
+
+<div class="card">
+
+<div class="icon">👨</div>
+
+<h3>
+    Homens
+</h3>
+
+<p>
+
+<span class="price">
+R$ 20
+</span>
+
+<br>
+
+Pagamento único com acesso vitalício.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🔐</div>
+
+<h3>
+    Segurança
+</h3>
+
+<p>
+Grupo com verificação,
+respeito e interação entre participantes.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
+
+
+<!-- =========================
+     BENEFÍCIOS
+========================= -->
+
+<section>
+
+<div class="container">
+
+<h2>
+    ✨ O que você encontra
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<div class="icon">👥</div>
+
+<h3>
+Pessoas reais
+</h3>
+
+<p>
+Interação de verdade e oportunidade
+para conhecer novas pessoas.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">💬</div>
+
+<h3>
+Conversas & amizades
+</h3>
+
+<p>
+Converse, faça novas amizades
+e participe da comunidade.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🎉</div>
+
+<h3>
+Diversão
+</h3>
+
+<p>
+Ambiente animado e movimentado
+todos os dias.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PIX
+========================= -->
 
 <section id="pix">
+
 <div class="container">
-  <h2>💳 Pagamento via PIX</h2>
-  <p class="lead">Para acesso masculino, o valor é de R$ 20, pagamento único.</p>
-  <div class="card">
-    <p><strong>Banco:</strong> PicPay</p>
-    <p><strong>Titular:</strong> Gabriel</p>
-    <p><strong>Chave PIX (CNPJ):</strong></p>
-    <div class="pix">
-      <code id="pixKey">52575565000109</code>
-      <button class="btn btn-primary" type="button" onclick="copyPix()">📋 Copiar chave</button>
-    </div>
-    <p id="copyMsg" class="notice"></p>
-  </div>
+
+<h2>
+    💳 Pagamento PIX
+</h2>
+
+<p class="lead">
+    Para acesso masculino, o valor é de R$ 20.
+</p>
+
+<div class="card">
+
+<p>
+<strong>Banco:</strong>
+PicPay
+</p>
+
+<p>
+<strong>Titular:</strong>
+Gabriel
+</p>
+
+<p>
+<strong>Chave PIX:</strong>
+</p>
+
+<div class="pix">
+
+<code id="pixKey">
+52575565000109
+</code>
+
+<button
+    class="btn btn-primary"
+    onclick="copiarPix()"
+>
+📋 Copiar chave
+</button>
+
 </div>
+
+<p
+    id="copyMsg"
+    class="notice"
+></p>
+
+</div>
+
+</div>
+
 </section>
+
+
+<!-- =========================
+     CADASTRO
+========================= -->
 
 <section id="cadastro">
-<div class="container form-wrap">
-  <h2>📝 Cadastro</h2>
-  <p class="lead">Preencha seus dados. Ao enviar, as informações serão preparadas para contato pelo WhatsApp.</p>
-  <div class="card">
-    <form id="cadastroForm">
-      <div class="field"><label for="nome">Nome</label><input id="nome" name="nome" required></div>
-      <div class="field"><label for="sobrenome">Sobrenome</label><input id="sobrenome" name="sobrenome" required></div>
-      <div class="field"><label for="estadoCivil">Estado civil</label><select id="estadoCivil" name="estadoCivil" required><option value="">Selecione</option><option>Casado(a)</option><option>Solteiro(a)</option></select></div>
-      <div class="field"><label for="sexo">Sexo</label><select id="sexo" name="sexo" required><option value="">Selecione</option><option>Masculino</option><option>Feminino</option></select></div>
-      <div class="field full"><label for="telefone">Número de telefone</label><input id="telefone" name="telefone" type="tel" inputmode="tel" placeholder="(DDD) 99999-9999" required></div>
-      <div class="field full"><label for="perfil">Perfil</label><select id="perfil" name="perfil" required><option value="">Selecione</option><option>Casal</option><option>Solteiro</option><option>Mulher solteira</option></select></div>
 
-      <div class="full">
-        <label>Termos de uso</label>
-        <div class="terms">
-          <p><strong>1. Respeito:</strong> todos os participantes devem tratar os demais com respeito. Não são permitidos assédio, ameaças, discriminação ou spam.</p>
-          <p><strong>2. Privacidade:</strong> não compartilhe dados pessoais de outras pessoas sem autorização.</p>
-          <p><strong>3. Idade:</strong> o acesso é destinado exclusivamente a adultos. Não é permitido cadastro de menores de idade.</p>
-          <p><strong>4. Conteúdo:</strong> cada participante é responsável pelo conteúdo que publica e deve respeitar as regras do Telegram e a legislação aplicável.</p>
-          <p><strong>5. Acesso:</strong> o pagamento de R$ 20, quando aplicável, é único e dá acesso vitalício conforme as regras do grupo.</p>
-        </div>
-      </div>
-      <div class="full checkbox">
-        <input id="aceite" type="checkbox" required>
-        <label for="aceite">Li e aceito os Termos de Uso e confirmo que sou maior de 18 anos.</label>
-      </div>
-      <div class="full"><button class="btn btn-primary" style="width:100%" type="submit">📲 Enviar cadastro pelo WhatsApp</button></div>
-    </form>
-    <div id="success" class="success">Cadastro preparado. O WhatsApp será aberto para você enviar as informações.</div>
-  </div>
+<div class="container form-wrap">
+
+<h2>
+    📝 Faça seu cadastro
+</h2>
+
+<p class="lead">
+    Preencha seus dados e envie o cadastro pelo WhatsApp.
+</p>
+
+
+<div class="card">
+
+<form id="cadastroForm">
+
+
+<div class="field">
+
+<label>
+Nome
+</label>
+
+<input
+    id="nome"
+    required
+>
+
 </div>
+
+
+<div class="field">
+
+<label>
+Sobrenome
+</label>
+
+<input
+    id="sobrenome"
+    required
+>
+
+</div>
+
+
+<div class="field">
+
+<label>
+Estado Civil
+</label>
+
+<select
+    id="estadoCivil"
+    required
+>
+
+<option value="">
+Selecione
+</option>
+
+<option>
+Casado
+</option>
+
+<option>
+Solteiro
+</option>
+
+</select>
+
+</div>
+
+
+<div class="field">
+
+<label>
+Sexo
+</label>
+
+<select
+    id="sexo"
+    required
+>
+
+<option value="">
+Selecione
+</option>
+
+<option>
+Masculino
+</option>
+
+<option>
+Feminino
+</option>
+
+</select>
+
+</div>
+
+
+<div class="field full">
+
+<label>
+Número de telefone
+</label>
+
+<input
+    id="telefone"
+    type="tel"
+    placeholder="(DDD) 99999-9999"
+    required
+>
+
+</div>
+
+
+<div class="field full">
+
+<label>
+Perfil
+</label>
+
+<select
+    id="perfil"
+    required
+>
+
+<option value="">
+Selecione
+</option>
+
+<option>
+Casal
+</option>
+
+<option>
+Solteiro
+</option>
+
+<option>
+Mulher solteira
+</option>
+
+</select>
+
+</div>
+
+
+<!-- TERMOS -->
+
+<div class="full">
+
+<label>
+Termos de Uso
+</label>
+
+<div class="terms">
+
+<p>
+<strong>1. Respeito:</strong>
+Todos os participantes devem tratar os demais com respeito.
+</p>
+
+<p>
+<strong>2. Privacidade:</strong>
+Não compartilhe dados pessoais de outras pessoas sem autorização.
+</p>
+
+<p>
+<strong>3. Idade:</strong>
+O grupo é destinado exclusivamente para maiores de 18 anos.
+</p>
+
+<p>
+<strong>4. Conteúdo:</strong>
+Cada participante é responsável pelo conteúdo publicado.
+</p>
+
+<p>
+<strong>5. Segurança:</strong>
+Não envie dinheiro ou dados pessoais para outros participantes
+sem verificar a situação.
+</p>
+
+<p>
+<strong>6. Regras:</strong>
+O participante deve respeitar as regras do Telegram
+e as regras estabelecidas pelo grupo.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ACEITE -->
+
+<div class="full checkbox">
+
+<input
+    id="aceite"
+    type="checkbox"
+    required
+>
+
+<label for="aceite">
+
+Li e aceito os Termos de Uso
+e confirmo que sou maior de 18 anos.
+
+</label>
+
+</div>
+
+
+<button
+    class="btn btn-primary full"
+    type="submit"
+>
+
+📲 Enviar cadastro pelo WhatsApp
+
+</button>
+
+
+</form>
+
+</div>
+
+</div>
+
 </section>
+
+
+<!-- =========================
+     FINAL
+========================= -->
 
 <section>
-<div class="container" style="text-align:center">
-  <h2>💛 Segurança • Respeito • Amizade • Diversão 💛</h2>
-  <p class="lead">🔥 ClubLove VIP — conectando pessoas todos os dias!</p>
-  <a class="btn btn-primary" href="#cadastro">🚀 Quero entrar</a>
+
+<div
+    class="container"
+    style="text-align:center;"
+>
+
+<h2>
+💛 Segurança • Respeito • Amizade • Diversão 💛
+</h2>
+
+<p class="lead">
+🔥 ClubLove VIP — conectando pessoas todos os dias!
+</p>
+
+
+<a
+    href="#cadastro"
+    class="btn btn-primary"
+>
+🚀 Quero entrar
+</a>
+
+
+<a
+    href="https://wa.me/5521979884682"
+    class="btn btn-whatsapp"
+    target="_blank"
+>
+💬 Falar no WhatsApp
+</a>
+
 </div>
+
 </section>
-</main>
+
+
+<!-- =========================
+     RODAPÉ
+========================= -->
 
 <footer>
-  <div class="container">ClubLove VIP • Telegram • © 2026</div>
+
+ClubLove VIP 💎
+
+<br>
+
+<span style="color:#b8860b;">
+Segurança • Respeito • Amizade • Diversão
+</span>
+
 </footer>
 
+
 <script>
-function copyPix(){
-  const key = document.getElementById('pixKey').textContent.trim();
-  navigator.clipboard.writeText(key).then(() => {
-    document.getElementById('copyMsg').textContent = '✅ Chave PIX copiada!';
-  }).catch(() => {
-    const t=document.createElement('textarea'); t.value=key; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove();
-    document.getElementById('copyMsg').textContent='✅ Chave PIX copiada!';
-  });
+
+/* =========================
+   COPIAR PIX
+========================= */
+
+function copiarPix() {
+
+    const chave =
+        document
+        .getElementById("pixKey")
+        .innerText
+        .trim();
+
+    navigator.clipboard
+        .writeText(chave)
+        .then(function() {
+
+            document
+            .getElementById("copyMsg")
+            .innerText =
+            "✅ Chave PIX copiada com sucesso!";
+
+        });
+
 }
 
-document.getElementById('cadastroForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  const data = new FormData(this);
-  const msg =
+
+/* =========================
+   CADASTRO WHATSAPP
+========================= */
+
+document
+.getElementById("cadastroForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const nome =
+        document.getElementById("nome").value;
+
+    const sobrenome =
+        document.getElementById("sobrenome").value;
+
+    const estadoCivil =
+        document.getElementById("estadoCivil").value;
+
+    const sexo =
+        document.getElementById("sexo").value;
+
+    const telefone =
+        document.getElementById("telefone").value;
+
+    const perfil =
+        document.getElementById("perfil").value;
+
+
+    const mensagem =
+
 `🔥 CADASTRO CLUBLOVE VIP 🔥
 
-Nome: ${data.get('nome')}
-Sobrenome: ${data.get('sobrenome')}
-Estado civil: ${data.get('estadoCivil')}
-Sexo: ${data.get('sexo')}
-Telefone: ${data.get('telefone')}
-Perfil: ${data.get('perfil')}
+Nome: ${nome}
+Sobrenome: ${sobrenome}
 
-✅ Termos de uso aceitos
+Estado Civil: ${estadoCivil}
+
+Sexo: ${sexo}
+
+Telefone: ${telefone}
+
+Perfil: ${perfil}
+
+✅ Termos de Uso aceitos
 ✅ Maior de 18 anos`;
-  const url = 'https://wa.me/5521979884682?text=' + encodeURIComponent(msg);
-  document.getElementById('success').style.display='block';
-  window.open(url, '_blank', 'noopener');
+
+
+    const whatsapp =
+        "https://wa.me/5521979884682?text="
+        +
+        encodeURIComponent(mensagem);
+
+
+    window.open(
+        whatsapp,
+        "_blank"
+    );
+
 });
+
 </script>
+
 </body>
 </html>
