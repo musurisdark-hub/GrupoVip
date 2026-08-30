@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#120516">
 
 <title>ClubLove VIP 💎</title>
 
 <style>
 
-/* =========================
-   CONFIGURAÇÕES
-========================= */
+/* =====================================================
+   CORES DO SITE
+===================================================== */
 
 :root {
     --preto: #050207;
-    --roxo: #18051f;
+    --roxo: #17051f;
+    --roxo2: #280638;
+
     --rosa: #ff0b83;
-    --rosa-claro: #ff69b4;
+    --rosa-claro: #ff70b9;
+
     --dourado: #ffd700;
-    --dourado-claro: #fff1a8;
+    --dourado-claro: #fff2a6;
     --dourado-escuro: #b8860b;
-    --branco: #fff;
-    --cinza: #d8cbd8;
+
+    --branco: #ffffff;
+    --cinza: #d8ccd9;
 }
 
-/* =========================
-   GERAL
-========================= */
+
+/* =====================================================
+   CONFIGURAÇÕES GERAIS
+===================================================== */
 
 * {
     box-sizing: border-box;
@@ -37,139 +47,230 @@ html {
 }
 
 body {
+
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background:
-        radial-gradient(circle at top, #4b0870 0%, #16051d 35%, #050207 80%);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
     color: var(--branco);
+
+    background:
+
+        radial-gradient(
+            circle at top,
+            #500878 0%,
+            #20052a 35%,
+            #050207 85%
+        );
+
+    min-height: 100vh;
 }
 
 .container {
+
     width: 92%;
+
     max-width: 1100px;
+
     margin: auto;
 }
 
 section {
+
     padding: 65px 0;
+
 }
 
-/* =========================
-   BANNER / CAPA
-========================= */
+
+/* =====================================================
+   BANNER
+===================================================== */
 
 .hero {
+
     position: relative;
+
+    width: 100%;
+
     min-height: 650px;
+
     overflow: hidden;
 
     display: flex;
+
     align-items: flex-end;
+
     justify-content: center;
 
-    border-bottom: 2px solid var(--dourado);
-    box-shadow: 0 10px 50px rgba(255, 215, 0, .15);
+    border-bottom:
+        2px solid var(--dourado);
+
+    box-shadow:
+        0 10px 50px
+        rgba(255, 215, 0, .18);
 }
 
+
 /* FOTO DA CAPA */
+
 .hero-banner {
+
     position: absolute;
+
     inset: 0;
 
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
+
     object-position: center top;
 
     z-index: 0;
 }
 
-/* ESCURECE A FOTO PARA O TEXTO APARECER */
+
+/* ESCURECIMENTO DA FOTO */
+
 .hero::after {
+
     content: "";
 
     position: absolute;
+
     inset: 0;
 
     background:
+
         linear-gradient(
             to bottom,
             rgba(0,0,0,.05),
-            rgba(5,2,7,.25),
-            rgba(5,2,7,.95)
+            rgba(0,0,0,.20),
+            rgba(5,2,7,.96)
         );
 
     z-index: 1;
 }
 
-/* =========================
-   TEXTO DO BANNER
-========================= */
+
+/* =====================================================
+   CONTEÚDO DO BANNER
+===================================================== */
 
 .hero-content {
+
     position: relative;
+
     z-index: 2;
 
     text-align: center;
 
-    padding: 80px 20px 45px;
+    padding:
+        100px
+        20px
+        45px;
 }
 
+
 .badge {
+
     display: inline-block;
 
-    padding: 8px 18px;
+    padding:
+        9px
+        20px;
 
-    border: 1px solid var(--dourado);
+    border:
+        1px solid var(--dourado);
+
     border-radius: 50px;
 
-    color: var(--dourado-claro);
+    color:
+        var(--dourado-claro);
 
-    background: rgba(0,0,0,.45);
+    background:
+        rgba(0,0,0,.48);
 
     box-shadow:
-        0 0 15px rgba(255,215,0,.35);
+        0 0 18px
+        rgba(255,215,0,.35);
 
     font-weight: bold;
 }
 
+
 h1 {
-    margin: 15px 0 5px;
 
-    font-size: clamp(45px, 9vw, 90px);
+    margin:
+        15px
+        0
+        8px;
 
-    color: var(--dourado);
+    font-family:
+        Georgia,
+        serif;
 
-    font-family: Georgia, serif;
+    font-size:
+        clamp(
+            45px,
+            9vw,
+            90px
+        );
+
+    color:
+        var(--dourado);
 
     text-shadow:
-        0 0 5px #fff,
-        0 0 15px var(--dourado),
-        0 0 35px rgba(255,215,0,.8);
+
+        0 0 5px #ffffff,
+
+        0 0 15px
+        var(--dourado),
+
+        0 0 35px
+        rgba(255,215,0,.75);
 }
 
+
 .hero p {
+
     max-width: 750px;
 
-    margin: 0 auto 25px;
+    margin:
+        0
+        auto
+        25px;
 
     font-size: 20px;
 
-    color: var(--dourado-claro);
+    color:
+        var(--dourado-claro);
 }
 
-/* =========================
+
+/* =====================================================
    BOTÕES
-========================= */
+===================================================== */
 
 .btn {
+
     display: inline-flex;
 
     align-items: center;
+
     justify-content: center;
 
-    padding: 14px 25px;
+    padding:
+        14px
+        25px;
+
+    margin: 5px;
+
+    border: none;
 
     border-radius: 15px;
 
@@ -177,104 +278,127 @@ h1 {
 
     font-weight: bold;
 
+    font-size: 16px;
+
     cursor: pointer;
 
-    border: none;
+    transition:
+        .3s;
 
-    transition: .3s;
-
-    margin: 5px;
 }
+
 
 .btn:hover {
-    transform: translateY(-3px) scale(1.02);
+
+    transform:
+        translateY(-3px)
+        scale(1.02);
+
 }
+
 
 /* BOTÃO DOURADO */
 
 .btn-primary {
-    color: #1a0b00;
+
+    color:
+        #1b0d00;
 
     background:
+
         linear-gradient(
             135deg,
-            #fff3a6,
+            #fff4a8,
             #ffd700,
             #b8860b
         );
 
     box-shadow:
-        0 0 15px rgba(255,215,0,.45);
+
+        0 0 18px
+        rgba(255,215,0,.45);
 }
+
 
 /* TELEGRAM */
 
 .btn-telegram {
+
     color: white;
 
     background:
+
         linear-gradient(
             135deg,
-            #7d20e8,
+            #7020d8,
             #ff0b83
         );
 
     box-shadow:
-        0 0 20px rgba(255,11,131,.4);
+
+        0 0 22px
+        rgba(255,11,131,.40);
 }
 
-/* WHATSAPP */
 
-.btn-whatsapp {
-    color: white;
-
-    background:
-        linear-gradient(
-            135deg,
-            #19c765,
-            #078d42
-        );
-
-    box-shadow:
-        0 0 20px rgba(25,199,101,.3);
-}
-
-/* =========================
+/* =====================================================
    TÍTULOS
-========================= */
+===================================================== */
 
 h2 {
+
+    margin:
+        0
+        0
+        14px;
+
     text-align: center;
 
-    font-family: Georgia, serif;
+    font-family:
+        Georgia,
+        serif;
 
-    font-size: clamp(30px, 5vw, 48px);
+    font-size:
+        clamp(
+            30px,
+            5vw,
+            48px
+        );
 
-    color: var(--dourado);
-
-    margin-bottom: 12px;
+    color:
+        var(--dourado);
 
     text-shadow:
-        0 0 10px rgba(255,215,0,.45);
+
+        0 0 12px
+        rgba(255,215,0,.45);
 }
 
-.lead {
-    text-align: center;
 
-    color: var(--dourado-claro);
+.lead {
 
     max-width: 750px;
 
-    margin: 0 auto 35px;
+    margin:
+        0
+        auto
+        35px;
+
+    text-align: center;
+
+    color:
+        var(--dourado-claro);
 
     font-size: 17px;
 }
 
-/* =========================
+
+/* =====================================================
    CARDS
-========================= */
+===================================================== */
 
 .grid {
+
     display: grid;
 
     grid-template-columns:
@@ -283,71 +407,107 @@ h2 {
     gap: 20px;
 }
 
+
 .card {
+
     padding: 28px;
 
     border-radius: 22px;
 
     background:
+
         linear-gradient(
             145deg,
-            rgba(30,8,40,.92),
-            rgba(8,3,12,.92)
+            rgba(35,8,45,.94),
+            rgba(8,3,12,.94)
         );
 
-    border: 1px solid rgba(255,215,0,.3);
+    border:
+        1px solid
+        rgba(255,215,0,.30);
 
     box-shadow:
-        0 15px 45px rgba(0,0,0,.4),
-        inset 0 0 25px rgba(255,215,0,.03);
 
-    transition: .3s;
+        0 15px 45px
+        rgba(0,0,0,.42);
+
+    transition:
+        .3s;
 }
+
 
 .card:hover {
-    transform: translateY(-5px);
 
-    border-color: var(--dourado);
+    transform:
+        translateY(-5px);
+
+    border-color:
+        var(--dourado);
 
     box-shadow:
-        0 0 25px rgba(255,215,0,.2),
-        0 20px 50px rgba(0,0,0,.5);
+
+        0 0 25px
+        rgba(255,215,0,.20),
+
+        0 20px 50px
+        rgba(0,0,0,.5);
 }
+
 
 .card h3 {
-    color: var(--dourado);
+
+    color:
+        var(--dourado);
 
     font-size: 21px;
+
+    margin-bottom: 8px;
 }
+
 
 .card p {
-    color: var(--cinza);
+
+    color:
+        var(--cinza);
+
+    line-height: 1.7;
 }
+
 
 .icon {
-    font-size: 40px;
+
+    font-size: 42px;
+
+    margin-bottom: 8px;
 }
 
-/* =========================
+
+/* =====================================================
    PREÇO
-========================= */
+===================================================== */
 
 .price {
-    color: var(--dourado);
+
+    color:
+        var(--dourado);
 
     font-size: 35px;
 
     font-weight: 900;
 
     text-shadow:
-        0 0 12px rgba(255,215,0,.5);
+
+        0 0 12px
+        rgba(255,215,0,.55);
 }
 
-/* =========================
+
+/* =====================================================
    PIX
-========================= */
+===================================================== */
 
 .pix {
+
     display: flex;
 
     align-items: center;
@@ -358,38 +518,52 @@ h2 {
 
     padding: 18px;
 
-    background: rgba(0,0,0,.4);
+    background:
+        rgba(0,0,0,.40);
 
-    border: 1px dashed var(--dourado);
+    border:
+        1px dashed
+        var(--dourado);
 
     border-radius: 15px;
 }
 
+
 .pix code {
+
     flex: 1;
 
-    color: var(--dourado-claro);
+    color:
+        var(--dourado-claro);
 
     font-size: 18px;
 
-    word-break: break-all;
+    word-break:
+        break-all;
 }
+
 
 .notice {
-    color: var(--dourado);
+
+    color:
+        var(--dourado);
 }
 
-/* =========================
+
+/* =====================================================
    FORMULÁRIO
-========================= */
+===================================================== */
 
 .form-wrap {
+
     max-width: 800px;
 
     margin: auto;
 }
 
+
 form {
+
     display: grid;
 
     grid-template-columns:
@@ -398,7 +572,9 @@ form {
     gap: 16px;
 }
 
+
 .field {
+
     display: flex;
 
     flex-direction: column;
@@ -406,27 +582,38 @@ form {
     gap: 7px;
 }
 
+
 .full {
-    grid-column: 1 / -1;
+
+    grid-column:
+        1 / -1;
 }
 
+
 label {
-    color: var(--dourado);
+
+    color:
+        var(--dourado);
 
     font-weight: bold;
 }
 
+
 input,
 select {
+
     width: 100%;
 
     padding: 14px;
 
     border-radius: 12px;
 
-    border: 1px solid rgba(255,215,0,.25);
+    border:
+        1px solid
+        rgba(255,215,0,.25);
 
-    background: #100714;
+    background:
+        #100714;
 
     color: white;
 
@@ -435,126 +622,197 @@ select {
     font-size: 16px;
 }
 
+
 input:focus,
 select:focus {
-    border-color: var(--dourado);
+
+    border-color:
+        var(--dourado);
 
     box-shadow:
-        0 0 10px rgba(255,215,0,.2);
+
+        0 0 10px
+        rgba(255,215,0,.25);
 }
+
 
 select option {
-    background: #15081b;
 
-    color: white;
+    background:
+        #16091d;
+
+    color:
+        white;
 }
 
-/* =========================
-   TERMOS
-========================= */
+
+/* =====================================================
+   TERMOS DE USO
+===================================================== */
 
 .terms {
+
     max-height: 240px;
 
     overflow-y: auto;
 
     padding: 18px;
 
-    background: #0c0610;
+    background:
+        #0c0610;
 
-    border: 1px solid rgba(255,215,0,.2);
+    border:
+        1px solid
+        rgba(255,215,0,.22);
 
     border-radius: 14px;
 
-    color: var(--cinza);
+    color:
+        var(--cinza);
 
     font-size: 14px;
+
+    line-height: 1.7;
 }
+
 
 .terms strong {
-    color: var(--dourado);
+
+    color:
+        var(--dourado);
 }
 
+
 .checkbox {
+
     display: flex;
 
     gap: 10px;
 
-    align-items: flex-start;
-
-    color: var(--cinza);
+    align-items:
+        flex-start;
 }
 
+
 .checkbox input {
+
     width: auto;
 
     margin-top: 5px;
 }
 
+
 .checkbox label {
-    color: var(--cinza);
+
+    color:
+        var(--cinza);
+
+    font-weight: normal;
 }
 
-/* =========================
+
+/* =====================================================
    RODAPÉ
-========================= */
+===================================================== */
 
 footer {
-    padding: 40px 0;
 
-    text-align: center;
+    padding:
+        40px
+        0;
 
-    border-top: 1px solid rgba(255,215,0,.2);
+    text-align:
+        center;
 
-    color: var(--dourado);
+    border-top:
+        1px solid
+        rgba(255,215,0,.25);
 
-    background: #050207;
+    background:
+        #050207;
+
+    color:
+        var(--dourado);
 }
 
-/* =========================
-   CELULAR
-========================= */
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
 
 @media (max-width: 760px) {
 
     .hero {
-        min-height: 580px;
+
+        min-height:
+            580px;
     }
 
     .grid {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
     }
 
     form {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
     }
 
     .hero-content {
-        padding-bottom: 35px;
+
+        padding:
+            80px
+            20px
+            35px;
     }
 
     h1 {
-        font-size: 52px;
+
+        font-size:
+            52px;
     }
 
     .hero p {
-        font-size: 16px;
+
+        font-size:
+            16px;
     }
+
+    .pix {
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+    }
+
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<!-- =========================
-     CAPA
-========================= -->
+
+<!-- =====================================================
+     BANNER
+===================================================== -->
 
 <header class="hero">
 
-    <!-- IMPORTANTE:
-         deixe CAPA_CLUBLOVE.jpg na mesma pasta deste HTML -->
+
+    <!--
+    COLOQUE A FOTO COM ESTE NOME:
+
+    CAPA_CLUBLOVE.jpg
+
+    NA MESMA PASTA DO INDEX.HTML
+    -->
 
     <img
         class="hero-banner"
@@ -562,27 +820,44 @@ footer {
         alt="ClubLove VIP"
     >
 
+
     <div class="hero-content container">
 
         <span class="badge">
+
             💎✨ CLUBLOVE VIP ✨💎
+
         </span>
 
+
         <h1>
+
             ClubLove VIP
+
         </h1>
 
+
         <p>
+
             🔥 O grupo que você estava procurando está aqui!
-            Conheça gente nova, faça amizades, converse e se divirta.
+
+            Conheça gente nova, faça amizades,
+            converse e se divirta.
+
         </p>
+
+
+        <!-- LINK DO TELEGRAM -->
 
         <a
             class="btn btn-telegram"
-            href="https://t.me/SEU_GRUPO_AQUI"
+            href="https://mdbt.com.br/fbabc624-f998-47e9-88b2-847b71b9aaa9"
             target="_blank"
+            rel="noopener"
         >
+
             📲 Entrar no Telegram
+
         </a>
 
     </div>
@@ -590,79 +865,108 @@ footer {
 </header>
 
 
-<!-- =========================
+
+<!-- =====================================================
      APRESENTAÇÃO
-========================= -->
+===================================================== -->
 
 <section>
 
 <div class="container">
 
+
 <h2>
+
     💎 Bem-vindo ao ClubLove VIP
+
 </h2>
+
 
 <p class="lead">
-    Um espaço para conhecer pessoas, fazer amizades,
-    conversar e se divertir todos os dias.
+
+    O grupo que você estava procurando está aqui!
+    Conheça pessoas novas, faça amizades,
+    converse e se divirta.
+
 </p>
 
 
 <div class="grid">
 
+
 <div class="card">
-<div class="icon">👩‍🦰</div>
 
-<h3>
-    Mulheres
-</h3>
+    <div class="icon">
+        👩‍🦰
+    </div>
 
-<p>
-    Entrada <strong style="color:#ffd700;">
-    100% GRATUITA
-    </strong> 💖
-</p>
+    <h3>
+        Mulheres
+    </h3>
+
+    <p>
+
+        Entrada
+
+        <strong style="color:#ffd700;">
+            100% GRATUITA
+        </strong>
+
+        💖
+
+    </p>
 
 </div>
 
 
+
 <div class="card">
 
-<div class="icon">👨</div>
+    <div class="icon">
+        👨
+    </div>
 
-<h3>
-    Homens
-</h3>
+    <h3>
+        Homens
+    </h3>
 
-<p>
+    <p>
 
-<span class="price">
-R$ 20
-</span>
+        <span class="price">
+            R$ 20
+        </span>
 
-<br>
+        <br>
 
-Pagamento único com acesso vitalício.
+        Pagamento único
+        com acesso vitalício.
 
-</p>
+    </p>
 
 </div>
 
 
+
 <div class="card">
 
-<div class="icon">🔐</div>
+    <div class="icon">
+        🔐
+    </div>
 
-<h3>
-    Segurança
-</h3>
+    <h3>
+        Segurança
+    </h3>
 
-<p>
-Grupo com verificação,
-respeito e interação entre participantes.
-</p>
+    <p>
+
+        Grupo com verificação,
+        respeito e interação
+        entre participantes.
+
+    </p>
 
 </div>
+
 
 </div>
 
@@ -671,66 +975,87 @@ respeito e interação entre participantes.
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================================
      BENEFÍCIOS
-========================= -->
+===================================================== -->
 
 <section>
 
 <div class="container">
 
+
 <h2>
+
     ✨ O que você encontra
+
 </h2>
+
 
 <div class="grid">
 
+
 <div class="card">
 
-<div class="icon">👥</div>
+    <div class="icon">
+        👥
+    </div>
 
-<h3>
-Pessoas reais
-</h3>
+    <h3>
+        Pessoas reais
+    </h3>
 
-<p>
-Interação de verdade e oportunidade
-para conhecer novas pessoas.
-</p>
+    <p>
+
+        Pessoas reais e
+        interação de verdade.
+
+    </p>
 
 </div>
 
 
+
 <div class="card">
 
-<div class="icon">💬</div>
+    <div class="icon">
+        💬
+    </div>
 
-<h3>
-Conversas & amizades
-</h3>
+    <h3>
+        Conversas & amizades
+    </h3>
 
-<p>
-Converse, faça novas amizades
-e participe da comunidade.
-</p>
+    <p>
+
+        Conversas, amizades
+        e muita diversão.
+
+    </p>
 
 </div>
 
 
+
 <div class="card">
 
-<div class="icon">🎉</div>
+    <div class="icon">
+        🎉
+    </div>
 
-<h3>
-Diversão
-</h3>
+    <h3>
+        Ambiente animado
+    </h3>
 
-<p>
-Ambiente animado e movimentado
-todos os dias.
-</p>
+    <p>
+
+        Grupo movimentado
+        todos os dias.
+
+    </p>
 
 </div>
+
 
 </div>
 
@@ -739,58 +1064,95 @@ todos os dias.
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================================
      PIX
-========================= -->
+===================================================== -->
 
 <section id="pix">
 
 <div class="container">
 
+
 <h2>
-    💳 Pagamento PIX
+
+    💳 Pagamento via PIX
+
 </h2>
 
+
 <p class="lead">
-    Para acesso masculino, o valor é de R$ 20.
+
+    Para acesso masculino,
+    o valor é de R$ 20.
+
 </p>
+
 
 <div class="card">
 
-<p>
-<strong>Banco:</strong>
-PicPay
-</p>
 
 <p>
-<strong>Titular:</strong>
-Gabriel
+
+    <strong>
+        Banco:
+    </strong>
+
+    PicPay
+
 </p>
 
+
 <p>
-<strong>Chave PIX:</strong>
+
+    <strong>
+        Titular:
+    </strong>
+
+    Gabriel
+
 </p>
+
+
+<p>
+
+    <strong>
+        Chave PIX CNPJ:
+    </strong>
+
+</p>
+
 
 <div class="pix">
 
+
 <code id="pixKey">
+
 52575565000109
+
 </code>
+
 
 <button
     class="btn btn-primary"
+    type="button"
     onclick="copiarPix()"
 >
-📋 Copiar chave
+
+    📋 Copiar chave
+
 </button>
 
+
 </div>
+
 
 <p
     id="copyMsg"
     class="notice"
 ></p>
 
+
 </div>
 
 </div>
@@ -798,60 +1160,81 @@ Gabriel
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================================
      CADASTRO
-========================= -->
+===================================================== -->
 
 <section id="cadastro">
 
 <div class="container form-wrap">
 
+
 <h2>
-    📝 Faça seu cadastro
+
+    📝 Cadastro
+
 </h2>
 
+
 <p class="lead">
-    Preencha seus dados e envie o cadastro pelo WhatsApp.
+
+    Preencha seus dados.
+    Depois do cadastro,
+    as informações serão enviadas
+    para o WhatsApp.
+
 </p>
 
 
 <div class="card">
 
+
 <form id="cadastroForm">
 
 
+<!-- NOME -->
+
 <div class="field">
 
-<label>
-Nome
+<label for="nome">
+    Nome
 </label>
 
 <input
     id="nome"
+    type="text"
     required
 >
 
 </div>
 
 
+
+<!-- SOBRENOME -->
+
 <div class="field">
 
-<label>
-Sobrenome
+<label for="sobrenome">
+    Sobrenome
 </label>
 
 <input
     id="sobrenome"
+    type="text"
     required
 >
 
 </div>
 
 
+
+<!-- ESTADO CIVIL -->
+
 <div class="field">
 
-<label>
-Estado Civil
+<label for="estadoCivil">
+    Estado Civil
 </label>
 
 <select
@@ -860,15 +1243,15 @@ Estado Civil
 >
 
 <option value="">
-Selecione
+    Selecione
 </option>
 
-<option>
-Casado
+<option value="Casado">
+    Casado
 </option>
 
-<option>
-Solteiro
+<option value="Solteiro">
+    Solteiro
 </option>
 
 </select>
@@ -876,10 +1259,13 @@ Solteiro
 </div>
 
 
+
+<!-- SEXO -->
+
 <div class="field">
 
-<label>
-Sexo
+<label for="sexo">
+    Sexo
 </label>
 
 <select
@@ -888,15 +1274,15 @@ Sexo
 >
 
 <option value="">
-Selecione
+    Selecione
 </option>
 
-<option>
-Masculino
+<option value="Masculino">
+    Masculino
 </option>
 
-<option>
-Feminino
+<option value="Feminino">
+    Feminino
 </option>
 
 </select>
@@ -904,10 +1290,13 @@ Feminino
 </div>
 
 
+
+<!-- TELEFONE -->
+
 <div class="field full">
 
-<label>
-Número de telefone
+<label for="telefone">
+    Número de telefone
 </label>
 
 <input
@@ -920,10 +1309,13 @@ Número de telefone
 </div>
 
 
+
+<!-- PERFIL -->
+
 <div class="field full">
 
-<label>
-Perfil
+<label for="perfil">
+    Perfil
 </label>
 
 <select
@@ -932,19 +1324,19 @@ Perfil
 >
 
 <option value="">
-Selecione
+    Selecione
 </option>
 
-<option>
-Casal
+<option value="Casal">
+    Casal
 </option>
 
-<option>
-Solteiro
+<option value="Solteiro">
+    Solteiro
 </option>
 
-<option>
-Mulher solteira
+<option value="Mulher solteira">
+    Mulher solteira
 </option>
 
 </select>
@@ -952,56 +1344,108 @@ Mulher solteira
 </div>
 
 
-<!-- TERMOS -->
+
+<!-- =================================================
+     TERMOS
+================================================= -->
 
 <div class="full">
 
+
 <label>
-Termos de Uso
+
+    Termos de Uso
+
 </label>
+
 
 <div class="terms">
 
-<p>
-<strong>1. Respeito:</strong>
-Todos os participantes devem tratar os demais com respeito.
-</p>
 
 <p>
-<strong>2. Privacidade:</strong>
-Não compartilhe dados pessoais de outras pessoas sem autorização.
+
+<strong>
+1. Respeito:
+</strong>
+
+Todos os participantes devem
+tratar os demais com respeito.
+
 </p>
 
-<p>
-<strong>3. Idade:</strong>
-O grupo é destinado exclusivamente para maiores de 18 anos.
-</p>
 
 <p>
-<strong>4. Conteúdo:</strong>
-Cada participante é responsável pelo conteúdo publicado.
+
+<strong>
+2. Privacidade:
+</strong>
+
+Não compartilhe dados pessoais
+de outras pessoas sem autorização.
+
 </p>
 
-<p>
-<strong>5. Segurança:</strong>
-Não envie dinheiro ou dados pessoais para outros participantes
-sem verificar a situação.
-</p>
 
 <p>
-<strong>6. Regras:</strong>
-O participante deve respeitar as regras do Telegram
-e as regras estabelecidas pelo grupo.
+
+<strong>
+3. Idade:
+</strong>
+
+O grupo é destinado exclusivamente
+a maiores de 18 anos.
+
 </p>
+
+
+<p>
+
+<strong>
+4. Conteúdo:
+</strong>
+
+Cada participante é responsável
+pelo conteúdo que publicar.
+
+</p>
+
+
+<p>
+
+<strong>
+5. Segurança:
+</strong>
+
+Tenha cuidado ao compartilhar
+dados pessoais ou realizar
+pagamentos com outros participantes.
+
+</p>
+
+
+<p>
+
+<strong>
+6. Regras:
+</strong>
+
+Todos devem respeitar as regras
+do grupo, do Telegram e a legislação
+aplicável.
+
+</p>
+
 
 </div>
 
 </div>
+
 
 
 <!-- ACEITE -->
 
 <div class="full checkbox">
+
 
 <input
     id="aceite"
@@ -1009,27 +1453,33 @@ e as regras estabelecidas pelo grupo.
     required
 >
 
+
 <label for="aceite">
 
-Li e aceito os Termos de Uso
-e confirmo que sou maior de 18 anos.
+    Li e aceito os Termos de Uso
+    e confirmo que sou maior de 18 anos.
 
 </label>
 
+
 </div>
 
+
+
+<!-- BOTÃO DE CADASTRO -->
 
 <button
     class="btn btn-primary full"
     type="submit"
 >
 
-📲 Enviar cadastro pelo WhatsApp
+    📲 Enviar cadastro pelo WhatsApp
 
 </button>
 
 
 </form>
+
 
 </div>
 
@@ -1038,9 +1488,10 @@ e confirmo que sou maior de 18 anos.
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================================
      FINAL
-========================= -->
+===================================================== -->
 
 <section>
 
@@ -1049,12 +1500,19 @@ e confirmo que sou maior de 18 anos.
     style="text-align:center;"
 >
 
+
 <h2>
-💛 Segurança • Respeito • Amizade • Diversão 💛
+
+    💛 Segurança • Respeito • Amizade • Diversão 💛
+
 </h2>
 
+
 <p class="lead">
-🔥 ClubLove VIP — conectando pessoas todos os dias!
+
+    🔥 ClubLove VIP —
+    conectando pessoas todos os dias!
+
 </p>
 
 
@@ -1062,45 +1520,46 @@ e confirmo que sou maior de 18 anos.
     href="#cadastro"
     class="btn btn-primary"
 >
-🚀 Quero entrar
+
+    🚀 Fazer cadastro
+
 </a>
 
-
-<a
-    href="https://wa.me/5521979884682"
-    class="btn btn-whatsapp"
-    target="_blank"
->
-💬 Falar no WhatsApp
-</a>
 
 </div>
 
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================================
      RODAPÉ
-========================= -->
+===================================================== -->
 
 <footer>
 
-ClubLove VIP 💎
 
-<br>
+    ClubLove VIP 💎
 
-<span style="color:#b8860b;">
-Segurança • Respeito • Amizade • Diversão
-</span>
+    <br><br>
+
+    <span style="color:#b8860b;">
+
+        Segurança • Respeito • Amizade • Diversão
+
+    </span>
+
 
 </footer>
 
 
+
 <script>
 
-/* =========================
+
+/* =====================================================
    COPIAR PIX
-========================= */
+===================================================== */
 
 function copiarPix() {
 
@@ -1110,6 +1569,7 @@ function copiarPix() {
         .innerText
         .trim();
 
+
     navigator.clipboard
         .writeText(chave)
         .then(function() {
@@ -1117,47 +1577,77 @@ function copiarPix() {
             document
             .getElementById("copyMsg")
             .innerText =
-            "✅ Chave PIX copiada com sucesso!";
+                "✅ Chave PIX copiada!";
+
+        })
+        .catch(function() {
+
+            alert(
+                "Chave PIX: " + chave
+            );
 
         });
 
 }
 
 
-/* =========================
-   CADASTRO WHATSAPP
-========================= */
+
+/* =====================================================
+   CADASTRO → WHATSAPP
+===================================================== */
 
 document
 .getElementById("cadastroForm")
-.addEventListener("submit", function(event) {
+.addEventListener(
+    "submit",
+    function(event) {
 
-    event.preventDefault();
-
-    const nome =
-        document.getElementById("nome").value;
-
-    const sobrenome =
-        document.getElementById("sobrenome").value;
-
-    const estadoCivil =
-        document.getElementById("estadoCivil").value;
-
-    const sexo =
-        document.getElementById("sexo").value;
-
-    const telefone =
-        document.getElementById("telefone").value;
-
-    const perfil =
-        document.getElementById("perfil").value;
+        event.preventDefault();
 
 
-    const mensagem =
+        const nome =
+            document
+            .getElementById("nome")
+            .value;
+
+
+        const sobrenome =
+            document
+            .getElementById("sobrenome")
+            .value;
+
+
+        const estadoCivil =
+            document
+            .getElementById("estadoCivil")
+            .value;
+
+
+        const sexo =
+            document
+            .getElementById("sexo")
+            .value;
+
+
+        const telefone =
+            document
+            .getElementById("telefone")
+            .value;
+
+
+        const perfil =
+            document
+            .getElementById("perfil")
+            .value;
+
+
+
+        const mensagem =
 
 `🔥 CADASTRO CLUBLOVE VIP 🔥
 
 Nome: ${nome}
+
 Sobrenome: ${sobrenome}
 
 Estado Civil: ${estadoCivil}
@@ -1172,20 +1662,35 @@ Perfil: ${perfil}
 ✅ Maior de 18 anos`;
 
 
-    const whatsapp =
-        "https://wa.me/5521979884682?text="
-        +
-        encodeURIComponent(mensagem);
+
+        /*
+        NÚMERO DO WHATSAPP
+        NÃO APARECE NO SITE.
+
+        Formato:
+        55 + DDD + número
+        */
+
+        const whatsapp =
+            "https://wa.me/5521979884682?text="
+            +
+            encodeURIComponent(
+                mensagem
+            );
 
 
-    window.open(
-        whatsapp,
-        "_blank"
-    );
 
-});
+        window.open(
+            whatsapp,
+            "_blank"
+        );
+
+    }
+);
 
 </script>
 
+
 </body>
+
 </html>
